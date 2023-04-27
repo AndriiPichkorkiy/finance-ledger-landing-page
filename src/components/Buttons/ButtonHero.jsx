@@ -1,9 +1,7 @@
-// types: hero, about, blog, submit
-
 import { BtnIcon, ButtonEl } from "./Button.styled";
 import btnIcon from "../../assests/images/gallery/next.png"
 
-const Button = ({ type = "hero", title }) => {
+const ButtonHero = ({ onClick }) => {
 
   return (
     <ButtonEl>
@@ -13,7 +11,7 @@ const Button = ({ type = "hero", title }) => {
   );
 }
 
-export default Button;
+export default ButtonHero;
 
 // Button.protoTypes = {
 //   type: PropTypes.string,

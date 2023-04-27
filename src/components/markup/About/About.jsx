@@ -1,15 +1,21 @@
-// showcase
+import aboutPoster from '../../../assests/images/home/people.jpg'
 
-import { Container, HeroTitle, HeroSubTitle } from "./About.styled";
-import heroBackground from "../../../assests/images/home/showcase.jpg"
-import { Button } from "../../Button";
+import { AboutSection, AboutPosterWrapper, AboutContent } from "./About.styled";
+import { ButtonAbout } from "../../Buttons";
+import { TitleH2 } from '../../TitleH2';
 
-export default function Hero() {
+export default function About() {
   return (
-    <Container bg={heroBackground}>
-      <HeroTitle >The Sky Is The Limit</HeroTitle>
-      <HeroSubTitle>We provide world class financial assistance</HeroSubTitle>
-      <Button />
-    </Container>
+    <AboutSection>
+      <AboutPosterWrapper>
+        <img src={aboutPoster} alt="team" />
+      </AboutPosterWrapper>
+      <AboutContent>
+        <p>What you are looking for</p>
+        <TitleH2>We provide bespoke solutions</TitleH2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum dignissimos quae laudantium asperiores nam aliquid impedit harum illum dolore explicabo ab dolores itaque rerum temporibus doloribus iste maiores deleniti?</p>
+        <ButtonAbout />
+      </AboutContent>
+    </AboutSection>
   )
 }

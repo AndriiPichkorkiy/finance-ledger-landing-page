@@ -13,8 +13,11 @@ const theme = {
 
   btnType1Bg: "#28A745",
   btnType1BgHover: "#2EBF4F",
+
   btnType2Bg: "inherit",
+  btnType2TextColor: "#28A745",
   btnType2BgHover: "#FFF",
+
   btnType3Bg: "inherit",
   btnType3BgHover: "#FFF",
 

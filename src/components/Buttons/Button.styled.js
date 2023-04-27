@@ -22,3 +22,17 @@ export const BtnIcon = styled.img`
   height: 18px;
   width: 18px;
 `;
+
+export const ButtonAboutEl = styled(ButtonEl)`
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${(props) => props.theme.textColorMain};
+  background: ${(props) => props.theme.btnType2Bg};
+
+  &:hover {
+    background: ${(props) => props.theme.btnType2BgHover};
+    // btnType2TextColor
+    border-color: ${(props) => props.theme.btnType2TextColor};
+    color: ${(props) => props.theme.btnType2TextColor};
+  }
+`;
