@@ -179,3 +179,11 @@ button {
   border-color: unset;
   border-width: 0px;
 }
+
+.cool-class {
+  border: 4px tomato solid;
+}
+
+.cool-class img {
+  transform: scale(0.8);
+}

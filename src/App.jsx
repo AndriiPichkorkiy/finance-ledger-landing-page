@@ -9,6 +9,9 @@ const theme = {
   accentColor: "#28A745",
   placeHolderColor: "#808080",
 
+  bgSection: "#FFF",
+  bgBlogSection: "#0284D0",
+
   borderRadius: "5px",
 
   btnType1Bg: "#28A745",

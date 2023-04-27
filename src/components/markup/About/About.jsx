@@ -1,4 +1,7 @@
 import aboutPoster from '../../../assests/images/home/people.jpg'
+import aboutPoster2x from '../../../assests/images/home/people@2x.jpg'
+import aboutPosterWebp from '../../../assests/images/home/people.webp'
+import aboutPosterWebp2x from '../../../assests/images/home/people@2x.webp'
 
 import { AboutSection, AboutPosterWrapper, AboutContent } from "./About.styled";
 import { ButtonAbout } from "../../Buttons";
@@ -8,7 +11,11 @@ export default function About() {
   return (
     <AboutSection>
       <AboutPosterWrapper>
-        <img src={aboutPoster} alt="team" />
+        <picture>
+          <source srcSet={`${aboutPosterWebp} 1x, ${aboutPosterWebp2x} 2x`} type="image/webp" />
+          <source srcSet={`${aboutPoster} 1x, ${aboutPoster2x} 2x`} type="image/jpeg" />
+          <img src={aboutPoster} alt="Team" />
+        </picture>
       </AboutPosterWrapper>
       <AboutContent>
         <p>What you are looking for</p>

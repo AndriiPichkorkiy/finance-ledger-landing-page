@@ -20,7 +20,8 @@ export const ButtonEl = styled.button`
 
 export const BtnIcon = styled.img`
   height: 18px;
-  width: 18px;
+  width: 9px;
+  margin-right: 8px;
 `;
 
 export const ButtonAboutEl = styled(ButtonEl)`
