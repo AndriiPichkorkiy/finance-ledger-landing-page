@@ -3,6 +3,8 @@ module.exports = {
 
   rules: {
     "no-unused-vars": "warn",
+    // "react/no-unused-prop-types": [0],
+    "react/prop-types": [1],
   },
   env: {
     es6: true,

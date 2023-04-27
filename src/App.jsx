@@ -9,7 +9,7 @@ const theme = {
   accentColor: "#28A745",
   placeHolderColor: "#808080",
 
-  roundRadius: "5px",
+  borderRadius: "5px",
 
   btnType1Bg: "#28A745",
   btnType1BgHover: "#2EBF4F",
@@ -23,7 +23,6 @@ const theme = {
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
-
       <Home />
     </ThemeProvider>
 
