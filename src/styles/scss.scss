@@ -1,0 +1,22 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  min-height: 50px;
+  background: lightcyan;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+}
+
+footer {
+  min-height: 50px;
+  background: PapayaWhip;
+}
