@@ -6,6 +6,7 @@ export const FooterSection = styled.footer`
   color: ${(props) => props.theme.textColorMain};
   background-color: ${(props) => props.theme.textColorSecond};
   padding: 30px 20px;
+  align-items: center;
 `;
 
 export const FooterSocialList = styled.ul`
@@ -21,6 +22,6 @@ export const FooterSocialItem = styled.li`
   fill: white;
 
   &:hover {
-    fill: tomato;
+    fill: ${(props) => props.theme.accentColor};
   }
 `;

@@ -1,0 +1,14 @@
+
+1) 
+Вказано: Фонове зображення секції hero (головне фото при загрузці) має чорну маску з коефіцієнтом прозорості 0.4
+
+В макеті : 0.5
+
+2) h2 font-weight: 400; ? Reset ?
+
+3) variants for bg 
+https://caniuse.com/?search=CSS%20image-set
+
+4) @2x _x2
+
+5) <data> blog

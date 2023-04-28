@@ -3,11 +3,12 @@ import contactPoster2x from '../../../assests/images/home/contact@2x.jpg'
 import contactPosterWebp from '../../../assests/images/home/contact.webp'
 import contactPosterWebp2x from '../../../assests/images/home/contact@2x.webp'
 
-import { CallbackSection, CallbackPosterWrapper, CallbackContent, FieldStyled } from "./Callback.styled";
+import { CallbackSection, CallbackPosterWrapper, CallbackContent, FieldStyled, CustomErrorMessage, FieldStyledV2 } from "./Callback.styled";
 import { ButtonCallback, ButtonEl } from "../../Buttons";
 import { TitleH2 } from '../../TitleH2';
 import ResponsiveImg from '../../ResponsiveImg/ResponsiveImg';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Input } from '../../Input';
 
 const img = {
   src: contactPoster,
@@ -50,12 +51,20 @@ export default function Callback() {
             }, 400);
           }}
         >
-          {({ isSubmitting }) => (
+          {({ isSubmitting, errors, touched }) => (
             <Form>
               <FieldStyled type="text" name="name" placeholder="Enter your name" />
-              <ErrorMessage name="name" component="div" />
-              <FieldStyled type="email" name="email" placeholder="Enter email*" />
-              <ErrorMessage name="email" component="div" />
+              {errors.name && touched.name ? (<CustomErrorMessage>{errors.name}</CustomErrorMessage>) : null}
+              {/* <ErrorMessage name="name" component="div" /> */}
+              {/* <FieldStyled type="email" name="email" placeholder="Enter email*" />
+              {errors.email && touched.email ? (<CustomErrorMessage>{errors.email}</CustomErrorMessage>) : null} */}
+              {/* <ErrorMessage name="email" component="div" /> */}
+
+              <Field
+                name="email"
+                render={Input}
+              />
+
               <ButtonEl type="submit" disabled={isSubmitting}>
                 Send
               </ButtonEl>
