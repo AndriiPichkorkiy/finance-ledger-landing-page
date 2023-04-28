@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { TitleH2 } from "../../TitleH2/TitleH2";
 
 export const AboutSection = styled.section`
   display: flex;
@@ -16,7 +15,3 @@ export const AboutPoster = styled.img``;
 export const AboutContent = styled.div`
   padding: 79px 20px;
 `;
-
-// export const TitleAbout = styled(TitleH2)`
-//   color: ;
-// `;

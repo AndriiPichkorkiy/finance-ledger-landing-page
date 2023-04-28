@@ -11,6 +11,7 @@ const theme = {
 
   bgSection: "#FFF",
   bgBlogSection: "#0284D0",
+  bgCallbackSection: "#F4F4F4",
 
   borderRadius: "5px",
 
@@ -22,6 +23,7 @@ const theme = {
   btnType2BgHover: "#FFF",
 
   btnType3Bg: "inherit",
+  btnType3TextColor: "#0284D0",
   btnType3BgHover: "#FFF",
 
 }

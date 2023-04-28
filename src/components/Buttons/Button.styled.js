@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ButtonEl = styled.button`
+  cursor: pointer;
   margin-top: 24px;
   padding: 16px 32px;
   display: inline-flex;
@@ -35,5 +36,19 @@ export const ButtonAboutEl = styled(ButtonEl)`
     // btnType2TextColor
     border-color: ${(props) => props.theme.btnType2TextColor};
     color: ${(props) => props.theme.btnType2TextColor};
+  }
+`;
+
+export const ButtonBlogEl = styled(ButtonEl)`
+  border-width: 1px;
+  border-style: solid;
+  border-color: ${(props) => props.theme.textColorMain};
+  background: ${(props) => props.theme.btnType3Bg};
+
+  &:hover {
+    background: ${(props) => props.theme.btnType3BgHover};
+    // btnType2TextColor
+    border-color: ${(props) => props.theme.btnType3TextColor};
+    color: ${(props) => props.theme.btnType3TextColor};
   }
 `;

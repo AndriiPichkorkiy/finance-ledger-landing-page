@@ -13,12 +13,18 @@ export const CasesContent = styled.div`
 `;
 
 export const CasesGalleryWrapper = styled.div`
-  margin: 31px;
+  margin-top: 31px;
 `;
 
-export const GalleryList = styled.ul``;
+export const GalleryList = styled.ul`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, 178px);
+  grid-row-gap: 8px;
+  width: 100%;
+  margin: 0;
+`;
 
 export const GalleryItem = styled.li`
-  margin-top: 8px;
-  height: 178px;
+  /* height: 178px; */
 `;

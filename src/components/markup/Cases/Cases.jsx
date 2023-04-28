@@ -1,15 +1,9 @@
-import aboutPoster from '../../../assests/images/home/people.jpg'
-import aboutPoster2x from '../../../assests/images/home/people@2x.jpg'
-import aboutPosterWebp from '../../../assests/images/home/people.webp'
-
-
-
-
 import { useState } from 'react';
-import { CasesSection, CasesContent, CasesGalleryWrapper, GalleryList, GalleryItem } from "./Cases.styled";
+import { CasesSection, CasesContent, CasesGalleryWrapper, GalleryList } from "./Cases.styled";
 import { TitleH2 } from '../../TitleH2';
-import Lightbox, { ImagesListType } from 'react-spring-lightbox';
-import { images } from './images';
+import Lightbox from 'react-spring-lightbox';
+import { images } from './imagesData';
+import ResponsiveImg from '../../ResponsiveImg/ResponsiveImg';
 
 export default function Cases() {
   // react-spring-lightbox settings
@@ -45,7 +39,7 @@ export default function Cases() {
       <CasesGalleryWrapper>
         <GalleryList>
           {images.map((img, i) => {
-            return <GalleryItem key={i}> <img data-index={i} src={img.src} alt="" onClick={hanlderOnClick} /> </GalleryItem>
+            return <ResponsiveImg key={i} data-index={i} onClick={hanlderOnClick} settings={img} />
           })}
         </GalleryList>
 
