@@ -55,9 +55,17 @@ export const LogoSecondWord = styled.span`
 export const NavEl = styled.nav``;
 
 export const NavList = styled.ul`
+  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   gap: 12px;
+
+  @media ${devices.tablet} {
+    gap: 20px;
+  }
+  @media ${devices.laptop} {
+    gap: 40px;
+  }
 `;
 
 export const NavItem = styled.li`

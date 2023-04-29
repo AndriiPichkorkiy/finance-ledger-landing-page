@@ -110,5 +110,9 @@ const images = [
 ];
 
 images.forEach((obj) => (obj.style = { width: "85%" }));
+const imagesForSlider = images.reduce((acc, obj) => {
+  acc.push(obj.jpg.x2);
+  return acc;
+}, []);
 
-export { images };
+export { images, imagesForSlider };

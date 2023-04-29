@@ -42,7 +42,7 @@ const SocialsData = [
 const Socials = ({ hover }) =>
   <SocialList>
     {SocialsData.map((social, i) => <SocialItem key={i} hover={hover}>
-      <a href={social.adress} target="_blank" rel="noopener noreferrer" alt={social.alt}>
+      <a href={social.adress} target="_blank" rel="noopener noreferrer">
         {React.createElement(social.element, social.props)}
       </a>
     </SocialItem>

@@ -28,6 +28,8 @@ html {
 body {
   /* font-family: "Roboto", sans-serif; */
   font-family: "Open Sans", sans-serif;
+  max-width: 1360px;
+  margin: 0 auto;
 }
 
 h1,
@@ -63,12 +65,4 @@ button {
   border: unset;
   border-color: unset;
   border-width: 0px;
-}
-
-.cool-class {
-  border: 4px tomato solid;
-}
-
-.cool-class img {
-  transform: scale(0.8);
 }

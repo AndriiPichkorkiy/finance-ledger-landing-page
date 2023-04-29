@@ -23,7 +23,6 @@ export const TeamImgWrapper = styled.div`
   &:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 10px black;
-    aspect-ratio: 1.5067 / 1;
     * {
       opacity: 1;
     }

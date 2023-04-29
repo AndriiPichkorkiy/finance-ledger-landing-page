@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Container, Logo, LogoFirstWord, LogoIconWrapper, LogoSecondWord, NavEl, NavItem, NavList } from './Header.styled'
 import logoIcon from '../../../assests/images/logo-icon.svg'
 
 export default function Header() {
   const [isHeaderBlack, setIsHeaderBlack] = useState(false);
 
+  // add background for header
   useEffect(() => {
     let lastKnownScrollPosition = 0;
     let ticking = false;
@@ -14,7 +15,7 @@ export default function Header() {
         if (scrollPosition > 120) setIsHeaderBlack(true)
         else setIsHeaderBlack(false)
       } else {
-        if (scrollPosition > 62) setIsHeaderBlack(true)
+        if (scrollPosition > 78) setIsHeaderBlack(true)
         else setIsHeaderBlack(false)
       }
 
@@ -37,10 +38,35 @@ export default function Header() {
     }
   }, [])
 
+  // handler for scroll offset while window resizing
+  useEffect(() => {
+    const style = document.createElement("style")
+    document.head.appendChild(style)
+
+    function resizeEvent() {
+      const height = document.getElementById("header").clientHeight
+
+      style.innerHTML = `
+        [id] {
+          scroll-margin-top: ${height}px;
+          scroll-snap-margin-top: ${height}px; /* iOS 11 and older */
+        }
+      `
+    }
+    resizeEvent();
+
+    window.addEventListener("resize", resizeEvent);
+    return () => {
+      document.removeEventListener("resize", resizeEvent)
+      document.head.removeChild(style)
+    }
+  }, [])
+
+
 
   return (
     <header >
-      <Container style={isHeaderBlack ? { background: "#000000CC" } : null}>
+      <Container style={isHeaderBlack ? { background: "#000000CC" } : null} id="header">
         {/* Logo */}
         <Logo href="./">
           <LogoIconWrapper>

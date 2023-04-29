@@ -5,7 +5,7 @@ import TeamCard from "./TeamCard";
 
 export default function Team() {
   return (
-    <TeamSection>
+    <TeamSection id="contact">
       <TeamContent>
         <p>What you are looking for</p>
         <TitleH2>We provide bespoke solutions</TitleH2>

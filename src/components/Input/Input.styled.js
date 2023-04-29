@@ -16,7 +16,8 @@ export const FieldStyled = styled.input`
     color: ${(props) => props.theme.placeHolderColor};
   }
 
-  &:focus ~ p {
+  &:focus ~ p,
+  &:not([value=""]) ~ p {
     left: 0px;
     top: -50%;
     transform: translateY(0%);
@@ -29,6 +30,7 @@ export const Placeholder = styled.p`
   top: 50%;
   transform: translateY(-50%);
   color: ${(props) => props.theme.placeHolderColor};
+  pointer-events: none;
 `;
 
 export const CustomErrorMessage = styled.div`

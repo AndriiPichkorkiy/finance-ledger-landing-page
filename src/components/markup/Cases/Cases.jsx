@@ -1,88 +1,73 @@
 import { useState } from 'react';
 import { CasesSection, CasesContent, CasesGalleryWrapper, GalleryList, GalleryItem } from "./Cases.styled";
 import { TitleH2 } from '../../TitleH2';
-import Lightbox from 'react-spring-lightbox';
-import { images } from './imagesData';
+// import Lightbox from 'react-spring-lightbox';
+import Lightbox from 'react-18-image-lightbox';
+import { images, imagesForSlider } from './imagesData';
 import ResponsiveImg from '../../ResponsiveImg/ResponsiveImg';
 
+import 'react-18-image-lightbox/style.css';
+import './slider.scss'
+import { Loader } from '../../Loader';
+import FsLightbox from 'fslightbox-react';
+
 export default function Cases() {
-  // react-spring-lightbox settings
   const [currentImageIndex, setCurrentIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
   const gotoPrevious = () =>
-    currentImageIndex > 0 && setCurrentIndex(currentImageIndex - 1);
+    setCurrentIndex((currentImageIndex + imagesForSlider.length - 1) % imagesForSlider.length);
 
   const gotoNext = () =>
-    currentImageIndex + 1 < images.length &&
-    setCurrentIndex(currentImageIndex + 1);
+    setCurrentIndex((currentImageIndex + 1) % imagesForSlider.length);
 
   const hanlderOnClick = (e) => {
-    // console.log('e.currentTarget', e.currentTarget)
-    // console.log('e.currentTarget.dataset', e.currentTarget.dataset)
     const index = Number(e.currentTarget.dataset.index);
+    console.log('index', index)
     setCurrentIndex(index)
     setIsOpen(true)
+    // document.body.style.overflow = "hidden"
   }
   const handleClose = () => {
     setIsOpen(false)
+    // document.body.style.overflow = "unset"
   }
-
-
-
-  // react-spring-lightbox end
   return (
-    <CasesSection id="cases">
-      <CasesContent>
-        <p>This is what we do</p>
-        <TitleH2>Business Cases</TitleH2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, sapiente!</p>
-      </CasesContent>
-      <CasesGalleryWrapper>
-        <GalleryList>
-          {images.map((img, i) => {
-            return (
-              <GalleryItem key={i} data-index={i} onClick={hanlderOnClick}>
-                <ResponsiveImg settings={img} />
-              </GalleryItem>
-            )
-          })}
-        </GalleryList>
-
+    <>
+      {isOpen &&
         <Lightbox
-          isOpen={isOpen}
-          onPrev={gotoPrevious}
-          onNext={gotoNext}
-          images={images}
-          currentIndex={currentImageIndex}
-          /* Add your own UI */
-          // renderHeader={() => (<CustomHeader />)}
-          // renderFooter={() => (<CustomFooter />)}
-          // renderPrevButton={() => (<CustomLeftArrowButton />)}
-          // renderNextButton={() => (<CustomRightArrowButton />)}
-          // renderImageOverlay={() => (<ImageOverlayComponent >)}
+          mainSrc={imagesForSlider[currentImageIndex]}
+          nextSrc={imagesForSlider[(currentImageIndex + 1) % imagesForSlider.length]}
+          prevSrc={imagesForSlider[(currentImageIndex + imagesForSlider.length - 1) % imagesForSlider.length]}
 
-          /* Add styling */
-          // className="cool-class"
-          style={{
-            background: "#000000B3", // black with 70% opacity
-          }}
+          onCloseRequest={handleClose}
+          onMovePrevRequest={gotoPrevious}
+          onMoveNextRequest={gotoNext}
 
-          /* Handle closing */
-          onClose={handleClose}
-
-          /* Use single or double click to zoom */
-          singleClickToZoom
-
-        /* react-spring config for open/close animation */
-        // pageTransitionConfig={{
-        //   from: { transform: "scale(0.75)", opacity: 0 },
-        //   enter: { transform: "scale(1)", opacity: 1 },
-        //   leave: { transform: "scale(0.75)", opacity: 0 },
-        //   config: { mass: 1, tension: 320, friction: 32 }
-        // }}
+          loader={<Loader />}
+        // imageCaption={<div>{imagesForSlider[currentImageIndex].alt}</div>}
         />
-      </CasesGalleryWrapper>
-    </CasesSection>
+      }
+      <CasesSection id="cases">
+        <CasesContent>
+          <p>This is what we do</p>
+          <TitleH2>Business Cases</TitleH2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, sapiente!</p>
+        </CasesContent>
+        <CasesGalleryWrapper>
+          <GalleryList>
+            {images.map((img, i) => {
+              return (
+                <GalleryItem key={i} data-index={i} onClick={hanlderOnClick}>
+                  <ResponsiveImg settings={img} />
+                </GalleryItem>
+              )
+            })}
+          </GalleryList>
+
+        </CasesGalleryWrapper>
+
+      </CasesSection>
+    </>
   )
 }

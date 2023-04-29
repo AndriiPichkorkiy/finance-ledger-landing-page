@@ -43,13 +43,27 @@ export const GalleryList = styled.ul`
 
   @media ${devices.tablet} {
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 18px;
-    grid-row-gap: 18px;
+    grid-auto-rows: minmax(148px, auto);
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+  }
+
+  @media ${devices.laptop} {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(282px, auto);
   }
 `;
 
 export const GalleryItem = styled.li`
   cursor: pointer;
+
+  @media ${devices.tablet} {
+    aspect-ratio: 1.5067 / 1;
+  }
+  @media ${devices.laptop} {
+    aspect-ratio: 1.4929 / 1;
+  }
+
   &:hover {
     opacity: 0.8;
   }

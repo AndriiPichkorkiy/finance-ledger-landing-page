@@ -25,7 +25,7 @@ const img = {
 
 export default function Callback() {
   return (
-    <CallbackSection id="contact">
+    <CallbackSection>
       <CallbackPosterWrapper>
         <ResponsiveImg settings={img} />
       </CallbackPosterWrapper>

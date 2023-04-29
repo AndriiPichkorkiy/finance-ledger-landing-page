@@ -1,6 +1,8 @@
 // import React from 'react'
 import { ThemeProvider } from "styled-components";
 import Home from "./pages/Home";
+import { LoaderContainer } from "./components/Loader/Loader.styled";
+import { Loader } from "./components/Loader";
 
 const theme = {
   textColorMain: "#FFF",
