@@ -22,6 +22,7 @@ export default function Header() {
     }
 
     const scrollEvent = () => {
+
       lastKnownScrollPosition = window.scrollY;
       if (!ticking) {
         window.requestAnimationFrame(() => {
@@ -44,6 +45,7 @@ export default function Header() {
     document.head.appendChild(style)
 
     function resizeEvent() {
+
       const height = document.getElementById("header").clientHeight
 
       style.innerHTML = `
@@ -58,6 +60,7 @@ export default function Header() {
     window.addEventListener("resize", resizeEvent);
     return () => {
       document.removeEventListener("resize", resizeEvent)
+
       document.head.removeChild(style)
     }
   }, [])

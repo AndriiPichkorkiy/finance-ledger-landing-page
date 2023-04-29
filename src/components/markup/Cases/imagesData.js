@@ -32,7 +32,7 @@ const images = [
   {
     src: cases1_2x,
     loading: "lazy",
-    alt: "Cases1 alt",
+    alt: "Cases1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
     jpg: {
       x1: cases1,
       x2: cases1_2x,
@@ -45,7 +45,7 @@ const images = [
   {
     src: cases2_2x,
     loading: "lazy",
-    alt: "Cases2 alt",
+    alt: "Cases2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
     jpg: {
       x1: cases2,
       x2: cases2_2x,
@@ -58,7 +58,7 @@ const images = [
   {
     src: cases3_2x,
     loading: "lazy",
-    alt: "Cases3 alt",
+    alt: "Cases3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
     jpg: {
       x1: cases3,
       x2: cases3_2x,
@@ -71,7 +71,7 @@ const images = [
   {
     src: cases4_2x,
     loading: "lazy",
-    alt: "cases4 alt",
+    alt: "Cases4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
     jpg: {
       x1: cases4,
       x2: cases4_2x,
@@ -84,7 +84,7 @@ const images = [
   {
     src: cases5_2x,
     loading: "lazy",
-    alt: "cases5 alt",
+    alt: "Cases5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
     jpg: {
       x1: cases5,
       x2: cases5_2x,
@@ -97,7 +97,7 @@ const images = [
   {
     src: cases6_2x,
     loading: "lazy",
-    alt: "cases6 alt",
+    alt: "cases6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
     jpg: {
       x1: cases6,
       x2: cases6_2x,

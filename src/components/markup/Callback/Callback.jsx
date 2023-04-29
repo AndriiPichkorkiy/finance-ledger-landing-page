@@ -23,6 +23,13 @@ const img = {
   },
 }
 
+// code for netlify
+const encode = (data) => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
+
 export default function Callback() {
   return (
     <CallbackSection>
@@ -52,6 +59,14 @@ export default function Callback() {
               alert(JSON.stringify(values, null, 2));
               setSubmitting(false);
             }, 400);
+
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: encode({ "form-name": "contact", values })
+            })
+              .then(() => alert("Success!"))
+              .catch(error => alert(error));
           }}
         >
           {({ isSubmitting }) => (

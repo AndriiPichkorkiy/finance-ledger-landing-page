@@ -68,3 +68,7 @@ export const GalleryItem = styled.li`
     opacity: 0.8;
   }
 `;
+
+export const ImageCaption = styled.div`
+  margin: 0 auto;
+`;

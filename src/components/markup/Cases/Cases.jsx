@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CasesSection, CasesContent, CasesGalleryWrapper, GalleryList, GalleryItem } from "./Cases.styled";
+import { CasesSection, CasesContent, CasesGalleryWrapper, GalleryList, GalleryItem, ImageCaption } from "./Cases.styled";
 import { TitleH2 } from '../../TitleH2';
 // import Lightbox from 'react-spring-lightbox';
 import Lightbox from 'react-18-image-lightbox';
@@ -8,9 +8,13 @@ import ResponsiveImg from '../../ResponsiveImg/ResponsiveImg';
 
 import 'react-18-image-lightbox/style.css';
 import './slider.scss'
-import { Loader } from '../../Loader';
-import FsLightbox from 'fslightbox-react';
 
+import { Loader } from '../../Loader';
+// import FsLightbox from 'fslightbox-react';
+
+
+
+console.log('imagesForSlider', imagesForSlider)
 export default function Cases() {
   const [currentImageIndex, setCurrentIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -27,10 +31,18 @@ export default function Cases() {
     setCurrentIndex(index)
     setIsOpen(true)
     // document.body.style.overflow = "hidden"
+    // document.body.style.top = -(document.documentElement.scrollTop) + 'px';
+    // document.body.classList.add("noscroll")
   }
   const handleClose = () => {
     setIsOpen(false)
-    // document.body.style.overflow = "unset"
+    // const temp = -document.body.style.top.slice(0, -2)
+    // document.body.classList.remove("noscroll")
+    // window.scroll({
+    //   top: temp,
+    //   left: 0,
+    //   behavior: "instant",
+    // })
   }
   return (
     <>
@@ -45,7 +57,7 @@ export default function Cases() {
           onMoveNextRequest={gotoNext}
 
           loader={<Loader />}
-        // imageCaption={<div>{imagesForSlider[currentImageIndex].alt}</div>}
+          imageCaption={<ImageCaption>{images[currentImageIndex].alt}</ImageCaption>}
         />
       }
       <CasesSection id="cases">

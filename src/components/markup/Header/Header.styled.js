@@ -5,7 +5,8 @@ export const Container = styled.div`
   position: fixed;
   z-index: 10;
   top: 0;
-  left: 0;
+  /* left: 0; */
+  max-width: 1360px;
   width: 100%;
   padding: 22px;
   color: ${(props) => props.theme.textColorMain};
