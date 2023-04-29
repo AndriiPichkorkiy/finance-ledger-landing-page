@@ -1,8 +1,9 @@
 import { ButtonAboutEl } from "./Button.styled";
+import PropTypes from 'prop-types';
 
 const ButtonAbout = ({ onClick }) => {
   return (
-    <ButtonAboutEl>
+    <ButtonAboutEl onClick={onClick}>
       Read More
     </ButtonAboutEl>
   );
@@ -10,7 +11,6 @@ const ButtonAbout = ({ onClick }) => {
 
 export default ButtonAbout;
 
-// Button.protoTypes = {
-//   type: PropTypes.string,
-//   title: PropTypes.string
-// }
+ButtonAbout.propTypes = {
+  onClick: PropTypes.func,
+}

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const ResponsiveImg = ({ settings: { jpg, webp, src, alt } }) => {
   return (
     <picture style={{
@@ -12,3 +14,12 @@ const ResponsiveImg = ({ settings: { jpg, webp, src, alt } }) => {
 }
 
 export default ResponsiveImg;
+
+ResponsiveImg.propTypes = {
+  settings: PropTypes.shape({
+    jpg: PropTypes.object.isRequired,
+    webp: PropTypes.object.isRequired,
+    src: PropTypes.string.isRequired,
+    alt: PropTypes.string.isRequired,
+  }).isRequired,
+}

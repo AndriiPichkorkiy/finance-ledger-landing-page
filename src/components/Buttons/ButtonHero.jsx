@@ -1,11 +1,11 @@
 import { BtnIcon, ButtonEl } from "./Button.styled";
 import btnIcon from "../../assests/images/fa-solid_angle-right.svg"
+import PropTypes from 'prop-types';
 
 const ButtonHero = ({ onClick }) => {
-
   return (
     <ButtonEl>
-      <BtnIcon src={btnIcon} alt="icon" />
+      <BtnIcon src={btnIcon} alt="icon" onClick={onClick} />
       Read More
     </ButtonEl>
   );
@@ -13,7 +13,6 @@ const ButtonHero = ({ onClick }) => {
 
 export default ButtonHero;
 
-// Button.protoTypes = {
-//   type: PropTypes.string,
-//   title: PropTypes.string
-// }
+ButtonHero.propTypes = {
+  onClick: PropTypes.func,
+}

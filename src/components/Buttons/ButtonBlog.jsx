@@ -1,8 +1,9 @@
 import { ButtonBlogEl } from "./Button.styled";
+import PropTypes from 'prop-types';
 
 const ButtonBlog = ({ onClick }) => {
   return (
-    <ButtonBlogEl>
+    <ButtonBlogEl onClick={onClick}>
       Read More
     </ButtonBlogEl>
   );
@@ -10,7 +11,6 @@ const ButtonBlog = ({ onClick }) => {
 
 export default ButtonBlog;
 
-// Button.protoTypes = {
-//   type: PropTypes.string,
-//   title: PropTypes.string
-// }
+ButtonBlog.propTypes = {
+  onClick: PropTypes.func,
+}

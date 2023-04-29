@@ -3,11 +3,11 @@ import contactPoster2x from '../../../assests/images/home/contact@2x.jpg'
 import contactPosterWebp from '../../../assests/images/home/contact.webp'
 import contactPosterWebp2x from '../../../assests/images/home/contact@2x.webp'
 
-import { CallbackSection, CallbackPosterWrapper, CallbackContent, FieldStyled, CustomErrorMessage, FieldStyledV2 } from "./Callback.styled";
-import { ButtonCallback, ButtonEl } from "../../Buttons";
+import { CallbackSection, CallbackPosterWrapper, CallbackContent } from "./Callback.styled";
+import { ButtonEl } from "../../Buttons";
 import { TitleH2 } from '../../TitleH2';
 import ResponsiveImg from '../../ResponsiveImg/ResponsiveImg';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field } from 'formik';
 import { Input } from '../../Input';
 import { NotificationManager } from 'react-notifications';
 

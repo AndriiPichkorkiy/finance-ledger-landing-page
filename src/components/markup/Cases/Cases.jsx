@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { CasesSection, CasesContent, CasesGalleryWrapper, GalleryList, GalleryItem, ImageCaption } from "./Cases.styled";
 import { TitleH2 } from '../../TitleH2';
-// import Lightbox from 'react-spring-lightbox';
 import Lightbox from 'react-18-image-lightbox';
 import { images, imagesForSlider } from './imagesData';
 import ResponsiveImg from '../../ResponsiveImg/ResponsiveImg';
@@ -10,11 +9,7 @@ import 'react-18-image-lightbox/style.css';
 import './slider.scss'
 
 import { Loader } from '../../Loader';
-// import FsLightbox from 'fslightbox-react';
 
-
-
-console.log('imagesForSlider', imagesForSlider)
 export default function Cases() {
   const [currentImageIndex, setCurrentIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -27,22 +22,11 @@ export default function Cases() {
 
   const hanlderOnClick = (e) => {
     const index = Number(e.currentTarget.dataset.index);
-    console.log('index', index)
     setCurrentIndex(index)
     setIsOpen(true)
-    // document.body.style.overflow = "hidden"
-    // document.body.style.top = -(document.documentElement.scrollTop) + 'px';
-    // document.body.classList.add("noscroll")
   }
   const handleClose = () => {
     setIsOpen(false)
-    // const temp = -document.body.style.top.slice(0, -2)
-    // document.body.classList.remove("noscroll")
-    // window.scroll({
-    //   top: temp,
-    //   left: 0,
-    //   behavior: "instant",
-    // })
   }
   return (
     <>
@@ -76,9 +60,7 @@ export default function Cases() {
               )
             })}
           </GalleryList>
-
         </CasesGalleryWrapper>
-
       </CasesSection>
     </>
   )

@@ -14,8 +14,6 @@ export const CallbackSection = styled.section`
 `;
 
 export const CallbackPosterWrapper = styled.div`
-  /* width: 320px;
-  height: 220px; */
   @media ${devices.tablet} {
     min-width: 48%;
     max-width: 48%;

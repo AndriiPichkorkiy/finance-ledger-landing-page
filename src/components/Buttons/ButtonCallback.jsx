@@ -1,8 +1,9 @@
 import { ButtonEl } from "./Button.styled";
+import PropTypes from 'prop-types';
 
 const ButtonCallback = ({ onClick }) => {
   return (
-    <ButtonEl>
+    <ButtonEl onClick={onClick}>
       Send
     </ButtonEl>
   );
@@ -10,7 +11,6 @@ const ButtonCallback = ({ onClick }) => {
 
 export default ButtonCallback;
 
-// Button.protoTypes = {
-//   type: PropTypes.string,
-//   title: PropTypes.string
-// }
+ButtonCallback.propTypes = {
+  onClick: PropTypes.func,
+}

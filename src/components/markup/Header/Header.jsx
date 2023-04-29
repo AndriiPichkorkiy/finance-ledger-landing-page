@@ -18,11 +18,9 @@ export default function Header() {
         if (scrollPosition > 78) setIsHeaderBlack(true)
         else setIsHeaderBlack(false)
       }
-
     }
 
     const scrollEvent = () => {
-
       lastKnownScrollPosition = window.scrollY;
       if (!ticking) {
         window.requestAnimationFrame(() => {

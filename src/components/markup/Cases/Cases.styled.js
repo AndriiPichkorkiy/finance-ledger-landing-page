@@ -3,8 +3,6 @@ import { devices } from "../../../helpers/theme";
 
 export const CasesSection = styled.section`
   padding: 56px 20px 40px 20px;
-  /* display: flex;
-  flex-direction: column; */
   color: ${(props) => props.theme.textColorSecond};
   background-color: ${(props) => props.theme.bgSection};
 
@@ -38,7 +36,6 @@ export const GalleryList = styled.ul`
   grid-template-columns: 1fr;
   grid-auto-rows: minmax(100px, 178px);
   grid-row-gap: 8px;
-  /* width: 100%; */
   margin: 0;
 
   @media ${devices.tablet} {

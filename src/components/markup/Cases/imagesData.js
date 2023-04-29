@@ -32,7 +32,7 @@ const images = [
   {
     src: cases1_2x,
     loading: "lazy",
-    alt: "Cases1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
+    alt: "A majestic eagle soars high above the rugged mountain peaks, its wings spread wide as it scans the landscape below.",
     jpg: {
       x1: cases1,
       x2: cases1_2x,
@@ -45,7 +45,7 @@ const images = [
   {
     src: cases2_2x,
     loading: "lazy",
-    alt: "Cases2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
+    alt: "A vibrant bouquet of freshly picked wildflowers rests on a rustic wooden table, their bright colors and sweet scent filling the room.",
     jpg: {
       x1: cases2,
       x2: cases2_2x,
@@ -58,7 +58,7 @@ const images = [
   {
     src: cases3_2x,
     loading: "lazy",
-    alt: "Cases3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
+    alt: "A lone figure stands on the edge of a rocky cliff, gazing out at the vast expanse of the ocean, the wind blowing through their hair.",
     jpg: {
       x1: cases3,
       x2: cases3_2x,
@@ -71,7 +71,7 @@ const images = [
   {
     src: cases4_2x,
     loading: "lazy",
-    alt: "Cases4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
+    alt: "A cozy fireplace crackles and pops, casting a warm and inviting glow over the room, as two friends sit together chatting.",
     jpg: {
       x1: cases4,
       x2: cases4_2x,
@@ -84,7 +84,7 @@ const images = [
   {
     src: cases5_2x,
     loading: "lazy",
-    alt: "Cases5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
+    alt: "A young child runs through a field of tall grass, their arms outstretched as they embrace the freedom and joy of youth.",
     jpg: {
       x1: cases5,
       x2: cases5_2x,
@@ -97,7 +97,7 @@ const images = [
   {
     src: cases6_2x,
     loading: "lazy",
-    alt: "cases6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate laudantium doloribus voluptas sapiente et, consectetur consequuntur, maxime ipsam beatae repellat corporis? Molestiae alias numquam cupiditate consequatur totam natus quia a.",
+    alt: "A bustling street market in a far-off land, filled with exotic aromas, colorful textiles, and friendly vendors eager to make a sale.",
     jpg: {
       x1: cases6,
       x2: cases6_2x,

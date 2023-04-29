@@ -1,5 +1,6 @@
 import { CustomErrorMessage, ErrorIcon, FieldStyled, FieldWrapper, Placeholder } from "./Input.styled";
 import worning from "../../assests/images/form/worning.svg"
+import PropTypes from 'prop-types';
 
 const Input = ({ field, form: { touched, errors }, placeholder, type }) => {
   return (
@@ -11,7 +12,6 @@ const Input = ({ field, form: { touched, errors }, placeholder, type }) => {
         errors[field.name] &&
         <>
           <ErrorIcon>
-            {/* <img src={worning} alt="" /> */}
             <object data={worning} width="100%" height="100%"> </object>
           </ErrorIcon>
           <CustomErrorMessage>{errors[field.name]}</CustomErrorMessage>
@@ -22,3 +22,13 @@ const Input = ({ field, form: { touched, errors }, placeholder, type }) => {
 }
 
 export default Input;
+
+Input.propTypes = {
+  field: PropTypes.object.isRequired,
+  form: PropTypes.shape({
+    touched: PropTypes.bool,
+    errors: PropTypes.object,
+  }),
+  placeholder: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+}

@@ -18,7 +18,6 @@ export const TeamImgWrapper = styled.div`
   position: relative;
   width: auto;
   aspect-ratio: 1.715 / 1;
-  /* height: 71.81%; */
 
   &:hover {
     transform: scale(1.05);
@@ -77,15 +76,4 @@ export const GalleryItemHover = styled.div`
   justify-content: center;
   align-items: center;
   opacity: 0;
-
-  /* & * {
-    pointer-events: none;
-  } */
-
-  /* &:hover {
-    opacity: 1;
-    & * {
-      pointer-events: unset;
-    }
-  } */
 `;

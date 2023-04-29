@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { devices } from "../../../helpers/theme";
-console.log("devices", devices);
 export const AboutSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -13,8 +12,6 @@ export const AboutSection = styled.section`
 `;
 
 export const AboutPosterWrapper = styled.div`
-  /* width: 320px;
-  height: 220px; */
   @media ${devices.tablet} {
     min-width: 48%;
     max-width: 48%;

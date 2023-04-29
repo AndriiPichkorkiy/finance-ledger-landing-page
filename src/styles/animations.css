@@ -1,10 +1,8 @@
 @keyframes opacity-0-100 {
   from {
-    /* pushes the sun down past the viewport */
     background-color: rgba(0, 0, 0, 1);
   }
   to {
-    /* returns the sun to its default position */
     background-color: rgba(0, 0, 0, 0.4);
   }
 }

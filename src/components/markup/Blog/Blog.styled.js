@@ -13,8 +13,6 @@ export const BlogSection = styled.section`
 `;
 
 export const BlogPosterWrapper = styled.div`
-  /* width: 320px;
-  height: 247px; */
   @media ${devices.tablet} {
     min-width: 50%;
   }

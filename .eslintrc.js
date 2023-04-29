@@ -3,8 +3,10 @@ module.exports = {
 
   rules: {
     "no-unused-vars": "warn",
-    // "react/no-unused-prop-types": [0],
+    "react/no-unused-prop-types": [0],
     "react/prop-types": [1],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
   },
   env: {
     es6: true,
@@ -19,6 +21,15 @@ module.exports = {
     requireConfigFile: false,
     babelOptions: {
       presets: ["@babel/preset-react"],
+    },
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: ["react"],
+  settings: {
+    react: {
+      version: "detect",
     },
   },
 };

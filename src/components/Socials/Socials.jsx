@@ -1,5 +1,6 @@
 import React from "react";
 import { SocialItem, SocialList } from "./Socials.styled";
+import PropTypes from 'prop-types';
 
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { GrLinkedinOption } from "react-icons/gr";
@@ -51,3 +52,7 @@ const Socials = ({ hover }) =>
 
 
 export default Socials;
+
+Socials.propTypes = {
+  hover: PropTypes.string,
+}

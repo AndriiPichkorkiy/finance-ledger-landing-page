@@ -28,7 +28,7 @@ export default function Blog() {
         <ResponsiveImg settings={img} />
       </BlogPosterWrapper>
       <BlogContent>
-        <p>April 16 2020</p>
+        <time dateTime='2020-04-16'>April 16 2020</time>
         <TitleH2>Blog Post One</TitleH2>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate, ipsum dignissimos quae laudantium asperiores nam aliquid impedit harum illum dolore explicabo ab dolores itaque rerum temporibus doloribus iste maiores deleniti?</p>
         <ButtonBlog />
