@@ -33,6 +33,7 @@ export const Logo = styled.a`
 
   &:hover * {
     transform: scale(1.05);
+    filter: brightness(120%) saturate(120%);
   }
 `;
 

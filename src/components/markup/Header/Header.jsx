@@ -43,9 +43,7 @@ export default function Header() {
     document.head.appendChild(style)
 
     function resizeEvent() {
-
       const height = document.getElementById("header").clientHeight
-
       style.innerHTML = `
         [id] {
           scroll-margin-top: ${height}px;

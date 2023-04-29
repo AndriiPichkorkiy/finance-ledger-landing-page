@@ -24,7 +24,6 @@ import ResponsiveImg from "../../ResponsiveImg/ResponsiveImg";
 export default function Hero() {
   return (
     <HeroSection bg={heroBackground} id="hero">
-
       <Container >
         {/* the BackgroundWrapper is analog background-image: image-set */}
         <BackgroundWrapper>
