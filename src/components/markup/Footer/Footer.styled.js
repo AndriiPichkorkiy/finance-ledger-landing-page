@@ -8,20 +8,3 @@ export const FooterSection = styled.footer`
   padding: 30px 20px;
   align-items: center;
 `;
-
-export const FooterSocialList = styled.ul`
-  display: flex;
-  justify-content: space-between;
-  gap: 25px;
-  margin-bottom: 12px;
-`;
-
-export const FooterSocialItem = styled.li`
-  width: 35px;
-  height: 35px;
-  fill: white;
-
-  &:hover {
-    fill: ${(props) => props.theme.accentColor};
-  }
-`;

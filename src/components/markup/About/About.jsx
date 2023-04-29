@@ -23,7 +23,7 @@ const img = {
 
 export default function About() {
   return (
-    <AboutSection>
+    <AboutSection id="about">
       <AboutPosterWrapper>
         <ResponsiveImg settings={img} />
       </AboutPosterWrapper>

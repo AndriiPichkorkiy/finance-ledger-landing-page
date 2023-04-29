@@ -15,6 +15,10 @@ const theme = {
 
   borderRadius: "5px",
 
+  paddingMobile: "20px",
+  paddingTablet: "32px",
+  paddingLaptop: "28px",
+
   btnType1Bg: "#28A745",
   btnType1BgHover: "#2EBF4F",
 

@@ -4,6 +4,7 @@ import heroBgx1JPG from "../../../assests/images/home/showcase.jpg";
 import heroBgx1WEBP from "../../../assests/images/home/showcase.webp";
 import heroBgx2JPG from "../../../assests/images/home/showcase@2x.jpg";
 import heroBgx2WEBP from "../../../assests/images/home/showcase@2x.webp";
+import { devices } from "../../../helpers/theme";
 
 // export const HeroSection = styled.section`
 //   background-size: cover;
@@ -37,6 +38,12 @@ export const HeroSection = styled.section`
 
 export const Container = styled.div`
   padding: 160px 20px 104px;
+  @media ${devices.tablet} {
+    padding: 378px 122px;
+  }
+  @media ${devices.laptop} {
+    padding: 280px 270px;
+  }
   color: ${(props) => props.theme.textColorMain};
   text-align: center;
 `;
@@ -46,14 +53,26 @@ export const HeroTitle = styled.h1`
   font-size: 40px;
   line-height: 54px;
   text-align: center;
+
+  @media ${devices.tablet} {
+    font-size: 55px;
+    line-height: 75px;
+  }
 `;
 
 export const HeroSubTitle = styled.p`
   display: block;
   margin: 16px 0px 0px 0px;
 
-  font-weight: 400;
   font-size: 26px;
   line-height: 32px;
   text-align: center;
+
+  @media ${devices.tablet} {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  @media ${devices.tablet} {
+    line-height: 55.47px;
+  }
 `;

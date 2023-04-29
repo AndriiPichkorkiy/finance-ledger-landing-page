@@ -25,7 +25,7 @@ const img = {
 
 export default function Callback() {
   return (
-    <CallbackSection>
+    <CallbackSection id="contact">
       <CallbackPosterWrapper>
         <ResponsiveImg settings={img} />
       </CallbackPosterWrapper>
@@ -35,8 +35,11 @@ export default function Callback() {
           initialValues={{ name: '', email: '' }}
           validate={values => {
             const errors = {};
+            if (!values.name) {
+              errors.name = 'This is a required field';
+            }
             if (!values.email) {
-              errors.email = 'Required';
+              errors.email = 'This is a required field';
             } else if (
               !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
             ) {
@@ -51,19 +54,14 @@ export default function Callback() {
             }, 400);
           }}
         >
-          {({ isSubmitting, errors, touched }) => (
+          {({ isSubmitting }) => (
             <Form>
-              <FieldStyled type="text" name="name" placeholder="Enter your name" />
-              {errors.name && touched.name ? (<CustomErrorMessage>{errors.name}</CustomErrorMessage>) : null}
-              {/* <ErrorMessage name="name" component="div" /> */}
-              {/* <FieldStyled type="email" name="email" placeholder="Enter email*" />
-              {errors.email && touched.email ? (<CustomErrorMessage>{errors.email}</CustomErrorMessage>) : null} */}
-              {/* <ErrorMessage name="email" component="div" /> */}
-
-              <Field
-                name="email"
-                render={Input}
-              />
+              <Field name="name">
+                {({ field, form }) => <Input field={field} form={form} placeholder="Enter your name" type="text" />}
+              </Field>
+              <Field name="email">
+                {({ field, form }) => <Input field={field} form={form} placeholder="Enter email*" type="email" />}
+              </Field>
 
               <ButtonEl type="submit" disabled={isSubmitting}>
                 Send

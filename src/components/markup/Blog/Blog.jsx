@@ -23,7 +23,7 @@ const img = {
 
 export default function Blog() {
   return (
-    <BlogSection>
+    <BlogSection id="blog">
       <BlogPosterWrapper>
         <ResponsiveImg settings={img} />
       </BlogPosterWrapper>

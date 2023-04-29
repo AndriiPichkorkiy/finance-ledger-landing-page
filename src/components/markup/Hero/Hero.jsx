@@ -6,7 +6,7 @@ import { ButtonHero } from "../../Buttons";
 
 export default function Hero() {
   return (
-    <HeroSection bg={heroBackground}>
+    <HeroSection bg={heroBackground} id="hero">
       <Container >
         <HeroTitle >The Sky Is The Limit</HeroTitle>
         <HeroSubTitle>We provide world class financial assistance</HeroSubTitle>

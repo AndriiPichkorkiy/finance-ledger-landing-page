@@ -33,7 +33,6 @@ export const ButtonAboutEl = styled(ButtonEl)`
 
   &:hover {
     background: ${(props) => props.theme.btnType2BgHover};
-    // btnType2TextColor
     border-color: ${(props) => props.theme.btnType2TextColor};
     color: ${(props) => props.theme.btnType2TextColor};
   }

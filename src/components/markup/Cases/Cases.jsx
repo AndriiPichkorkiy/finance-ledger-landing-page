@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CasesSection, CasesContent, CasesGalleryWrapper, GalleryList } from "./Cases.styled";
+import { CasesSection, CasesContent, CasesGalleryWrapper, GalleryList, GalleryItem } from "./Cases.styled";
 import { TitleH2 } from '../../TitleH2';
 import Lightbox from 'react-spring-lightbox';
 import { images } from './imagesData';
@@ -18,7 +18,9 @@ export default function Cases() {
     setCurrentIndex(currentImageIndex + 1);
 
   const hanlderOnClick = (e) => {
-    const index = Number(e.target.dataset.index);
+    // console.log('e.currentTarget', e.currentTarget)
+    // console.log('e.currentTarget.dataset', e.currentTarget.dataset)
+    const index = Number(e.currentTarget.dataset.index);
     setCurrentIndex(index)
     setIsOpen(true)
   }
@@ -30,7 +32,7 @@ export default function Cases() {
 
   // react-spring-lightbox end
   return (
-    <CasesSection>
+    <CasesSection id="cases">
       <CasesContent>
         <p>This is what we do</p>
         <TitleH2>Business Cases</TitleH2>
@@ -39,7 +41,11 @@ export default function Cases() {
       <CasesGalleryWrapper>
         <GalleryList>
           {images.map((img, i) => {
-            return <ResponsiveImg key={i} data-index={i} onClick={hanlderOnClick} settings={img} />
+            return (
+              <GalleryItem key={i} data-index={i} onClick={hanlderOnClick}>
+                <ResponsiveImg settings={img} />
+              </GalleryItem>
+            )
           })}
         </GalleryList>
 
