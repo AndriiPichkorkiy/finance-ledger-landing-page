@@ -9,6 +9,7 @@ import { TitleH2 } from '../../TitleH2';
 import ResponsiveImg from '../../ResponsiveImg/ResponsiveImg';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { Input } from '../../Input';
+import { NotificationManager } from 'react-notifications';
 
 const img = {
   src: contactPoster,
@@ -55,22 +56,19 @@ export default function Callback() {
             return errors;
           }}
           onSubmit={(values, { setSubmitting }) => {
-            setTimeout(() => {
-              alert(JSON.stringify(values, null, 2));
-              setSubmitting(false);
-            }, 400);
-
             fetch("/", {
               method: "POST",
               headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: encode({ "form-name": "contact", values })
+              body: encode({ "form-name": "contact", ...values })
             })
-              .then(() => alert("Success!"))
-              .catch(error => alert(error));
+              .then(() => NotificationManager.success('Success!'))
+              .catch(NotificationManager.warning('Something wrong')).finally(() => {
+                setSubmitting(false);
+              })
           }}
         >
           {({ isSubmitting }) => (
-            <Form>
+            <Form name="contact" netlify={"netlify"}>
               <Field name="name">
                 {({ field, form }) => <Input field={field} form={form} placeholder="Enter your name" type="text" />}
               </Field>

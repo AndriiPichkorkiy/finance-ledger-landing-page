@@ -76,7 +76,7 @@ module.exports = {
       directory: path.join(__dirname, "./src"),
     },
   },
-  devtool: isDev ? "source-map" : "",
+  devtool: isDev ? "source-map" : false,
   plugins: [
     new HTMLWebpackPlugin({
       template: "./index.html",

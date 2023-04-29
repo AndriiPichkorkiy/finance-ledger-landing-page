@@ -1,8 +1,10 @@
 // import React from 'react'
 import { ThemeProvider } from "styled-components";
 import Home from "./pages/Home";
-import { LoaderContainer } from "./components/Loader/Loader.styled";
-import { Loader } from "./components/Loader";
+import 'react-notifications/lib/notifications.css';
+
+import 'react-notifications/lib/notifications.css';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 const theme = {
   textColorMain: "#FFF",
@@ -38,6 +40,7 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <Home />
+      <NotificationContainer />
     </ThemeProvider>
 
   )
