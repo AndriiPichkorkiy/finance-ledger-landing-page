@@ -62,7 +62,7 @@ export default function Callback() {
               body: encode({ "form-name": "contact", ...values })
             })
               .then(() => NotificationManager.success('Success!'))
-              .catch(NotificationManager.warning('Something wrong')).finally(() => {
+              .catch((error) => NotificationManager.warning('Something wrong')).finally(() => {
                 setSubmitting(false);
               })
           }}
