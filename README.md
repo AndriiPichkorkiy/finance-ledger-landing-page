@@ -20,3 +20,4 @@ Responsive landing page written using React.js and own setupped Webpack.
 
 - Webpack
 - Figma
+- ChatGPT for generation random descriptions for slider
