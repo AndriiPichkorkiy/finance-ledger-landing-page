@@ -26,7 +26,7 @@ export default Input;
 Input.propTypes = {
   field: PropTypes.object.isRequired,
   form: PropTypes.shape({
-    touched: PropTypes.bool,
+    touched: PropTypes.object,
     errors: PropTypes.object,
   }),
   placeholder: PropTypes.string.isRequired,
